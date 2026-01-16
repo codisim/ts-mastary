@@ -1,3 +1,5 @@
+import userData from "./fakedb.js";
+
 type User = {
     id: string | number;
     firstName: string;
@@ -25,3 +27,17 @@ type UserAddressPosition = User['address']['position']
 function getAddress(add: UserAddress) {
 
 }
+
+
+
+
+const getUsers = JSON.parse(userData) as User;
+
+getUsers.address.position.lat;
+
+function printSkills(skills: User['skills']) {
+    const res = skills.map(skill => skill.name);
+    console.log(res);
+}
+
+

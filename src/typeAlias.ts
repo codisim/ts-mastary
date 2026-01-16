@@ -1,3 +1,6 @@
+import userData from "./fakedb.js";
+
+
 type User = {
     id: string | number;
     firstName: string;
@@ -42,7 +45,6 @@ function createUser2(firstName: string, lastName: string) {
 
     return { user, user2, user3 };
 }
-
 
 
 
