@@ -25,7 +25,13 @@ function createUser2(firstName: string, lastName: string) {
         skills: []
     } as User; // Type assertion to User type
 
- 
+    const user3 = {
+        id: crypto.randomUUID(),
+        firstName,
+        lastName,
+        skills: []
+    } satisfies User; // Using 'satisfies' operator | can be extra properties but must satisfy User type
+
 
     return { user, user2, user3 };
 }
