@@ -6,7 +6,15 @@ type User = {
 }
 
 
+function createUser(firstName: string, lastName: string): User {
 
+    return {
+        id: crypto.randomUUID(),
+        firstName,
+        lastName,
+        skills: []
+    }
+}
 
 
 function createUser2(firstName: string, lastName: string) {
