@@ -53,3 +53,15 @@ employees.push({
 });
 
 
+function getSingleEmployee(id: number) : {
+    name: string;
+    age: number;
+    isActive: boolean;
+    employeeRole: employeeRole;
+    salary?: number; // optional property
+} {
+    const user = employees.find((emp) => emp.id === id);
+    return user;
+}
+
+console.log(employees); 
