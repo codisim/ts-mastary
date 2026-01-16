@@ -40,4 +40,8 @@ function printSkills(skills: User['skills']) {
     console.log(res);
 }
 
+function printSkill(skill: User['skills'][number]) {
+    console.log(skill.name);
+}
+
 
