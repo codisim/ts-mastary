@@ -18,6 +18,14 @@ function createUser2(firstName: string, lastName: string) {
         skills: []
     }
 
+    const user2 = {
+        id: crypto.randomUUID(),
+        firstName,
+        lastName,
+        skills: []
+    } as User; // Type assertion to User type
+
+ 
 
     return { user, user2, user3 };
 }
