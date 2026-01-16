@@ -1,3 +1,3 @@
-import './array';
+import './functs';
 
 console.log(200);
