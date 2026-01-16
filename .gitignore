@@ -1,0 +1,14 @@
+node_modules
+dist
+src/**/*.test.ts
+.env
+.DS_Store
+.vscode
+.idea
+*.log
+coverage
+*.js
+*.js.map
+*.d.ts
+*.swp
+*.swo
