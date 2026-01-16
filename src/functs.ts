@@ -61,7 +61,14 @@ function getSingleEmployee(id: number) : {
     salary?: number; // optional property
 } {
     const user = employees.find((emp) => emp.id === id);
+
+    if (!user) {
+        throw new Error('Employee not found');
+    }
+
     return user;
 }
 
-console.log(employees); 
+const singleEmployee = getSingleEmployee(2);
+
+console.log(singleEmployee); 
