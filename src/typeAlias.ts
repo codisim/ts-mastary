@@ -30,8 +30,7 @@ function createUser2(firstName: string, lastName: string) {
         id: crypto.randomUUID(),
         firstName,
         lastName,
-        skills: []
-    } as User; // Type assertion to User type
+    } as User; // Type assertion | ghus diye job nile ja hoy tai
 
     const user3 = {
         id: crypto.randomUUID(),
@@ -43,3 +42,9 @@ function createUser2(firstName: string, lastName: string) {
 
     return { user, user2, user3 };
 }
+
+
+
+
+
+
