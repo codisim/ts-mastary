@@ -32,5 +32,32 @@ type Mestery<T> = {
     value: T;
 }
 
-const numberBox: Mestery<number> = {value: 100};
-const userBox: Mestery<User | null> = {value: null};
+const numberBox: Mestery<number> = { value: 100 };
+const userBox: Mestery<User | null> = { value: null };
+
+
+
+
+type ApiResponse<T> = {
+    status: number;
+    data: T;
+    message: string;
+}
+
+async function fetchUser(): Promise<ApiResponse<User>> {
+    const res = await fetch("https://api.example.com/user/1");
+    const data = await res.json();
+    return {
+        status: res.status,
+        data,
+        message: "User fetched successfully"
+    }
+}
+
+
+async function main() {
+    const user = await fetchUser();
+    console.log(user.data.firstName);
+}
+
+main();
