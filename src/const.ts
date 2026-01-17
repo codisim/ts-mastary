@@ -19,4 +19,20 @@ function generateColorForOrder(status: keyof typeof OrderStatus) {
         default:
             return 'gray';
     }
-}   
+}
+
+
+
+type RolePermission = {
+    admin: string[];
+    user: string[];
+    guest: string[];
+}
+
+
+const permissions = {
+    admin: ['create', 'read', 'update', 'delete'],
+    user: ['read', 'update'],
+    guest: ['read'],
+    extraRole: ['unknown']
+} satisfies RolePermission
