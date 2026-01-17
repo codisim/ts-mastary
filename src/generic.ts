@@ -38,7 +38,7 @@ const userBox: Mestery<User | null> = { value: null };
 
 
 
-type ApiResponse<T> = {
+export type ApiResponse<T> = {
     status: number;
     data: T;
     message: string;
@@ -56,7 +56,7 @@ async function fetchUser(): Promise<ApiResponse<User>> {
 
 
 
-type Porduct = {
+export type Porduct = {
     id: number;
     name: string;
     price: number;
