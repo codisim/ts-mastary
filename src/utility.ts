@@ -42,3 +42,40 @@ const nahid = createUser({
 
 
 
+type Roles = "ADMIN" | "USER" | "GUEST";
+
+type activeRoles = Exclude<Roles, "GUEST">;
+type activeRoles2 = Extract<Roles, "ADMIN">;
+
+
+
+
+type UserInput = string | null | undefined;
+type ValidInput = NonNullable<UserInput>;
+
+
+
+function Add(a: number, b: number) {
+    return a + b;
+}
+
+type Add = typeof Add; // type of Add function
+type AddResult = ReturnType<Add>; // type of Add function return type
+
+
+
+
+function fetchData(): Promise<string> {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Data fetched successfully");
+        }, 2000);
+    });
+}
+
+type fetchDataReturnType = Awaited<ReturnType<typeof fetchData>>; // type of fetchData function return type
+
+
+
+
+
