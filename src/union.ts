@@ -51,3 +51,10 @@ function handleApiRes(res: APIRes) {
         console.log(res.error);
     }
 }
+
+
+
+
+type Person = {
+    
+}
