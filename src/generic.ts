@@ -55,9 +55,34 @@ async function fetchUser(): Promise<ApiResponse<User>> {
 }
 
 
+
+type Porduct = {
+    id: number;
+    name: string;
+    price: number;
+    discount: number;
+}
+
+
+async function fetchProduct(): Promise<ApiResponse<Porduct>> {
+    const res = await fetch("https://api.example.com/product/1");
+    const data = await res.json();
+    return {
+        status: res.status,
+        data,
+        message: "Product fetched successfully"
+    }
+}
+
+
 async function main() {
     const user = await fetchUser();
+    const product = await fetchProduct();
+
+
     console.log(user.data.firstName);
+
+    console.log(product.data.name);
 }
 
 main();
