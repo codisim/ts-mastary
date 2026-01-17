@@ -1,7 +1,7 @@
 import userData from "./fakedb.js";
 
 
-type User = {
+export type User = {
     id: string | number;
     firstName: string;
     lastName?: string;
