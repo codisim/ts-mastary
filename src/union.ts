@@ -25,3 +25,29 @@ function getUser(user: User) {
         user.recruitmentAccess
     }
 }
+
+
+
+type ErrRes = {
+    success: false;
+    statusCode: number;
+    error: string;
+}
+
+type SuccRes = {
+    success: true;
+    data: any[];
+}
+
+
+type APIRes = ErrRes | SuccRes;
+
+
+
+function handleApiRes(res: APIRes) {
+    if (res.success) {
+        console.log(res.data);
+    } else {
+        console.log(res.error);
+    }
+}
