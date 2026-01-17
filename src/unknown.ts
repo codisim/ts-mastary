@@ -44,3 +44,19 @@ function processUser(input: unknown) {
         console.log(`Invalid input: ${input}`)
     }
 }
+
+
+function isError(input: unknown): input is Error {
+    const error = input as Error;
+    return error instanceof Error;
+}
+
+try {
+
+} catch (error: unknown) {
+    if (isError(error)) {
+        console.error(error.message);
+    } else {
+        console.error('Unknown error');
+    }
+}
