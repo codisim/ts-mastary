@@ -25,3 +25,22 @@ function processData(input: unknown) {
 // processData(undefined);
 // processData(new Date());
 // processData(Math.PI);
+
+
+type User = {
+    id: number;
+    name: string;
+}
+
+function isUser(input: unknown): input is User {
+    const user = input as User;
+    return typeof user.id === 'number' && typeof user.name === 'string';
+}
+
+function processUser(input: unknown) {
+    if (isUser(input)) {
+        console.log(`User id ${input.id} and name ${input.name}`);
+    } else {
+        console.log(`Invalid input: ${input}`)
+    }
+}
