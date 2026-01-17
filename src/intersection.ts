@@ -12,4 +12,5 @@ type ButtonProps = BaseProps & {
 type LinkProps = BaseProps & {
     value: string;
     onClick: (value: string) => void;
+    plcaeholder?: string;
 }

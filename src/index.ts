@@ -1,3 +1,3 @@
-import './typeAlias2.js';
+import './generic.js';
 
 console.log(200);
