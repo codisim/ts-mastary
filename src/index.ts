@@ -1,3 +1,3 @@
-import './generic.js';
+import './unknown.js';
 
 console.log(200);
